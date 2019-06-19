@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			body{
+				margin: 0px;
+			}
+			html,body,div {
+				height: 100%;
+			}
+			
+						
+			#one {
+				background-image: url(img/halloween1.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+				display: block;
+			}
+			
+			#two {
+				background-image: url(img/halloween2.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+				display: none;
+			}
+			
+			#three {
+				background-image: url(img/halloweenMain.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+				display: none;
+			}
+			
+			#four {
+				background-image: url(img/charm5.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+				display: none;
+			}
+			
+			#title {
+				position: fixed;
+				top: 50px;
+				left: 300px;
+				animation: titlemove 2s ;
+				
+			}
+			
+			@keyframes titlemove{
+				from{
+					opacity: 0;
+				}
+				to{
+					opacity: 1;
+				}
+			}
+			
+			#box {
+				position: fixed;
+				bottom: 250px;
+				left: 300px;
+				animation: boxmove 1s infinite;
+			}
+			
+			@keyframes boxmove {
+				0%{
+					left:300px; 
+				}
+				50%{
+					left:330px;
+				}
+				100%{
+					left:300px;
+				}
+			}
+			#pump {
+				position: fixed;
+				top: 50px;
+				left: 280px
+			}
+			
+			#startgame {
+				position: fixed;
+				bottom: 250px;
+				left: 380px
+			}
+			
+			#charm01 {
+				position: fixed;
+				left: 50px;
+				top: 100px;
+				animation: movecharm01 5s infinite;
+			}
+			@keyframes movecharm01{
+				0%{
+					left:50px;
+					top: 100px;
+				}
+				30%{
+					left:50px;
+					top: 200px;
+				}
+				60%{
+					left:100px;
+					top: 150px;
+				}
+				100%{
+					left:50px;
+					top: 100px;
+				}
+			}
+			#charm02 {
+				position: fixed;
+				left: 250px;
+				top: 400px;
+				animation: movecharm02 10s infinite;
+			}
+			@keyframes movecharm02{
+				0%{
+					left:250px;
+				    top:400px;
+				}
+				30%{left:300px;
+				    top:450px;
+				    }
+				60%{left:350px;
+				    top:450px;
+				    }
+				100%{
+					left:250px;
+				    top:400px;
+				}
+			}
+			#charm03 {
+				position: fixed;
+				left: 50px;
+				top: 650px;
+				animation: movecharm03 15s infinite;
+			}
+			@keyframes movecharm03{
+				0%{
+					left:50px;
+				    top:650px;
+				}
+				50%{left:500px;
+				    top:750px;
+				    }
+				100%{
+					left:50px;
+				    top:650px;
+				}
+			}
+			#charm04 {
+				position: fixed;
+				left: 500px;
+				top: 50px;
+				animation: movecharm04 10s infinite;
+			}
+			@keyframes movecharm04{
+				0%{
+					left:500px;
+				    top:50px;
+				}
+				10%{
+					left:650px;
+				    top:100px;
+				}
+				50%{
+					left: 650px;
+					top: 650px;
+				}
+				90%{
+					left:650px;
+				    top:100px;
+				}
+				100%{
+					left:500px;
+				    top:50px;
+				}
+			}
+			#charm05 {
+				position: fixed;
+				left: 400px;
+				top: 900px;
+				animation: movecharm05 5s infinite;
+			}
+			@keyframes movecharm05{
+				0%{
+					left:400px;
+				    top:900px;
+				}
+				50%{
+					left:400px;
+					top:950px;
+				}
+				100%{
+					left:400px;
+					top:900px;
+				}
+			}
+			#charm06 {
+				position: fixed;
+				left: 300px;
+				top: 800px;
+				animation: movecharm06 10s infinite;
+			}
+			@keyframes movecharm06{
+				0%{
+					left: 300px;
+					top: 800px;
+				}
+				50%{
+					left:300px;
+					top: 1200px;
+				}
+				100%{
+					left: 300px;
+					top: 1200px;
+				}
+			}
+			#charm07 {
+				position: fixed;
+				right: 150px;
+				bottom: 300px;
+				animation: movecharm07 3s infinite;
+			}
+			@keyframes movecharm07{
+				0%{
+					width: 100px;
+				    height: 100px;
+				}
+				100%{
+					width: 20px;
+					height: 20px;
+				}
+			}
+			
+		</style>
+		
+		<script>
+			
+			window.onload = function(){
+				
+				var boxdiv = document.getElementById("box");
+				boxdiv.onclick = function(){
+					var onediv = document.getElementById("one");
+					var twodiv = document.getElementById("two");
+					var threediv = document.getElementById("three");
+					var fourdiv = document.getElementById("four");
+					onediv.style.display = "none";
+					twodiv.style.display = "block";
+					threediv.style.display = "none";
+					fourdiv.style.display = "none";
+				}
+				
+				
+				var startgamediv = document.getElementById("startgame");
+				startgamediv.onclick = function(){
+					var onediv = document.getElementById("one");
+					var twodiv = document.getElementById("two");
+					var threediv = document.getElementById("three");
+					var fourdiv = document.getElementById("four");
+					onediv.style.display = "none";
+					twodiv.style.display = "none";
+					threediv.style.display = "block";
+					fourdiv.style.display = "none";
+				}
+				var charm01 = document.getElementById("charm01");
+				charm01.onclick = show;
+				function show(){
+					var i = Math.round(Math.random() * 7+ 1);
+					var loc = "url(img/charm" + i + ".jpg)";
+					alert(loc);
+					var onediv = document.getElementById("one");
+					var twodiv = document.getElementById("two");
+					var threediv = document.getElementById("three");
+					var fourdiv = document.getElementById("four");
+					onediv.style.display = "none";
+					twodiv.style.display = "none";
+					threediv.style.display = "none";
+					fourdiv.style.backgroundImage = loc;
+					fourdiv.style.display = "block";
+					
+				}
+				var charm02 = document.getElementById("charm02");
+				var charm03 = document.getElementById("charm03");
+				var charm04 = document.getElementById("charm04");
+				var charm05 = document.getElementById("charm05");
+				var charm06 = document.getElementById("charm06");
+				var charm07 = document.getElementById("charm07");
+				charm02.onclick = show;
+				charm03.onclick = show;
+				charm04.onclick = show;
+				charm05.onclick = show;
+				charm06.onclick = show;
+				charm07.onclick = show;
+			}
+		</script>
+	</head>
+
+	<body>
+		<audio src="audio/AKB48.mp3" autoplay="autoplay"></audio>
+		<div id="one">
+			<img id="title" src="img/title.png" />
+			<img id="box" src="img/box.png" />
+		</div>
+		<div id="two">
+			<img id="pump" src="img/pumpkin.png" />
+			<img id="startgame" src="img/startGame.jpg" />
+		</div>
+		<div id="three">
+			<img id="charm01" src="img/1.png" />
+			<img id="charm02" src="img/2.png" />
+			<img id="charm03" src="img/3.png" />
+			<img id="charm04" src="img/4.png" />
+			<img id="charm05" src="img/5.png" />
+			<img id="charm06" src="img/6.png" />
+			<img id="charm07" src="img/7.png" />
+		</div>
+		<div id="four">
+
+		</div>
+
+	</body>
+
+</html>
